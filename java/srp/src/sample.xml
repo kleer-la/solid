@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<products>
+  <product>
+  	<id>1</id>
+  	<name>IPod Nano</name>
+	<unitPrice>129.55</unitPrice>
+	<discontinued>false</discontinued>
+  </product>
+  <product>
+  	<id>2</id>
+  	<name>IPod Touch</name>
+	<unitPrice>259.10</unitPrice>
+	<discontinued>false</discontinued>
+  </product>
+  <product>
+  	<id>3</id>
+  	<name>IPod</name>
+	<unitPrice>78.95</unitPrice>
+	<discontinued>true</discontinued>
+  </product>
+</products>
