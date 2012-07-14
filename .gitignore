@@ -18,3 +18,11 @@ local.properties
 .classpath
 .settings/
 .loadpath
+
+# Visual Studio #
+_ReSharper.*
+obj
+bin
+*.suo
+*.user
+~$*.*
