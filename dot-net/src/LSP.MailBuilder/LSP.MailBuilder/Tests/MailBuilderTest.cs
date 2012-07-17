@@ -6,7 +6,7 @@ using NUnit.Framework;
 namespace LSP.MailBuilder.Tests
 {
     [TestFixture]
-    class MailBuilderTest
+    public class MailBuilderTest
     {
         [Test]
         public void TestContactInformation()
