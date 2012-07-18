@@ -21,14 +21,14 @@ public class MailBuilderTests extends TestCase {
     	assertEquals("cliente@gmail.com", message.FromAddress);
     	assertEquals("empresa@gmail.com", message.ToAddress);
         assertEquals("Hola", message.Subject);
-//        assertContains("Nombre: Homero", message.Body);
-//        assertContains("Apellido: Simpson", message.Body);
+        assertTrue(message.Body.contains("Nombre: Homero"));
+        assertTrue(message.Body.contains("Apellido: Simpson"));
     }
 
     public void testContactInformationSubsidiary() {
         // arrange
     	ContactInformation contactInformation = 
-    		new ContactInformation("Homero", "Simpson", "Retiro");
+    		new ContactInformationSubsidiary("Homero", "Simpson", "Retiro");
     	
         IMailMessageBuilder<ContactInformation> mailBuilder = 
 			new ContactInformationMailMessageBuilder();
@@ -44,15 +44,15 @@ public class MailBuilderTests extends TestCase {
     	assertEquals("cliente@gmail.com", message.FromAddress);
     	assertEquals("empresa@gmail.com", message.ToAddress);
         assertEquals("Hola", message.Subject);
-//        assertContains("Nombre: Homero", message.Body);
-//        assertContains("Apellido: Simpson", message.Body);
-//        assertContains("Sucursal: Retiro", message.Body);
+        assertTrue(message.Body.contains("Nombre: Homero"));
+        assertTrue(message.Body.contains("Apellido: Simpson"));
+        assertTrue(message.Body.contains("Sucursal: Retiro"));
     }
 
     public void testContactInformationAuctionSaleArtWork() {
         // arrange
     	ContactInformation contactInformation = 
-    		new ContactInformation("Homero", "Simpson", "Retiro", "3x3");
+    		new ContactInformationAuction("Homero", "Simpson", "Picasso", "3x3");
     	
         IMailMessageBuilder<ContactInformation> mailBuilder = 
 			new ContactInformationMailMessageBuilder();
@@ -68,9 +68,9 @@ public class MailBuilderTests extends TestCase {
     	assertEquals("cliente@gmail.com", message.FromAddress);
     	assertEquals("empresa@gmail.com", message.ToAddress);
         assertEquals("Hola", message.Subject);
-//        assertContains("Nombre: Homero", message.Body);
-//        assertContains("Apellido: Simpson", message.Body);
-//        assertContains("Sucursal: Retiro", message.Body);
-//        assertContains("Dimensiones: 3x3", message.Body);
+        assertTrue(message.Body.contains("Nombre: Homero"));
+        assertTrue(message.Body.contains("Apellido: Simpson"));
+        assertTrue(message.Body.contains("Autor: Picasso"));
+        assertTrue(message.Body.contains("Dimensiones: 3x3"));
     }
 }

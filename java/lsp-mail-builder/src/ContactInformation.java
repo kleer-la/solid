@@ -1,13 +1,12 @@
 
 public class ContactInformation {
 
+	public String FirstName;
+	public String LastName;
+	
 	public ContactInformation(String firstName, String lastName) {
-	}
-	
-	public ContactInformation(String firstName, String lastName, String subsidiary) {
-	}
-	
-	public ContactInformation(String firstName, String lastName, String subsidiary, String dimensions) {
+		FirstName = firstName;
+		LastName = lastName;
 	}
 
 }
