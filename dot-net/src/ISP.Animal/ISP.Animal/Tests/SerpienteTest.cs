@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace ISP.Animal.Tests
 {
     [TestFixture]
-    class SerpienteTest
+    public class SerpienteTest
     {
         [Test]
         public void SinAlimentar()
